@@ -5,8 +5,10 @@ from src import Random_Number
 
 st.title('Raffle Winners Today!!!')
 
-r, s = Random_Number.run_app()
-st.write(r)
-st.write(s)
-
+try:
+    r, s = Random_Number.run_app()
+    st.write(r)
+    st.write(s)
+except:
+    pass
 

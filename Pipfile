@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 streamlit = "==1.11.1"
+openpyxl = "*"
 
 [dev-packages]
 

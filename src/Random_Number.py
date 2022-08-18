@@ -8,8 +8,8 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-filepath2 = os.path.join(Path(__file__).parents[1], 'data\SBI SMART Report MTD 7.22 to 8.13.22 Team (1).xlsx')
-filepath1 = os.path.join(Path(__file__).parents[1], 'data\s.xlsx')
+filepath2 = os.path.join(Path(__file__).parents[1], 'data/SBI SMART Report MTD 7.22 to 8.13.22 Team (1).xlsx')
+filepath1 = os.path.join(Path(__file__).parents[1], 'data/s.xlsx')
 
 def run_app():
 
@@ -32,7 +32,7 @@ def run_app():
 
     # Limit Scores to 9 and 10 only
     top_scores = d[d['SMS tNPS'] >= 9]
-
+    top_scores.drop_duplicates(inplace=True, subset=['Tech ID'])
     # Format First name Last name instead of Last name First name
     top_scores['First Name'] = top_scores["Last Name, First Name"].str.split(
         ',', expand=True)[1]
