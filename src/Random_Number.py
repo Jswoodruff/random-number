@@ -32,7 +32,7 @@ def run_app():
 
     # Limit Scores to 9 and 10 only
     top_scores = d[d['SMS tNPS'] >= 9]
-
+    top_scores.drop_duplicates(inplace=True, subset=['Tech ID'])
     # Format First name Last name instead of Last name First name
     top_scores['First Name'] = top_scores["Last Name, First Name"].str.split(
         ',', expand=True)[1]
