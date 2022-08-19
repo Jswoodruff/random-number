@@ -9,7 +9,7 @@ warnings.filterwarnings("ignore")
 
 
 filepath2 = os.path.join(Path(__file__).parents[1], 'data/SBI SMART Report MTD 7.22 to 8.13.22 Team (1).xlsx')
-filepath1 = os.path.join(Path(__file__).parents[1], 'data/s.xlsx')
+filepath1 = os.path.join(Path(__file__).parents[1], 'data/s1.xlsx')
 
 def run_app():
 
