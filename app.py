@@ -7,8 +7,8 @@ st.title('Raffle Winners Today!!!')
 
 try:
     r, s = Random_Number.run_app()
-    st.subheader(r)
-    st.subheader(s)
+    st.write(r)
+    st.write(s)
 except:
     pass
 
